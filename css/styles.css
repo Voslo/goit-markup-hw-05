@@ -762,10 +762,6 @@ img{
 .modal-textarea{
     margin-bottom: 16px;
 }
-.checkbox{
-    display: block;
-    color: var(--lightslate);
-}
 .comment{
     width: 100%;
     height: 120px;
@@ -818,7 +814,7 @@ img{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.checkbox-input:checked + .checkbox-box {
+.checkbox-input:checked + .checkbox>.checkbox-box {
     background-color: var(--ocean);
     border: none;
     fill: var(--cloud);

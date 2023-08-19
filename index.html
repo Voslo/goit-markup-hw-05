@@ -475,7 +475,7 @@
             <label class="label-modal" for="user-name">Name</label>
             <div class="custom-input">
               <input
-                class="input name-modal"
+                class="input"
                 type="text"
                 id="user-name"
                 name="user-name"
@@ -490,7 +490,7 @@
             <label class="label-modal" for="user-phone">Phone</label>
             <div class="custom-input">
               <input
-                class="input phone-modal"
+                class="input"
                 type="tel"
                 id="user-phone"
                 name="user-phone"
@@ -505,7 +505,7 @@
             <label class="label-modal" for="user-email">Email</label>
             <div class="custom-input">
               <input
-                class="input email-modal"
+                class="input"
                 type="email"
                 id="user-email"
                 name="user-email"
@@ -516,7 +516,7 @@
             </div>
           </div>
 
-          <div class="modal-item">
+          <div class="modal-textarea">
             <label class="label-modal" for="user-comment">Comment</label>
             <textarea
               class="comment"
@@ -526,26 +526,26 @@
               rows="10"
               placeholder="Text input"
             ></textarea>
-            <div class="cont-checkbox">
-              <label class="label-modal checkbox" for="user-privacy">
-                <input
-                  class="checkbox-input visually-hidden"
-                  type="checkbox"
-                  name="user-privacy"
-                  id="user-privacy"
-                  value="true"
-                />
-                <span class="checkbox-box">
-                  <svg class="icon-check" width="10" height="8">
-                    <use href="./images/icons.svg#icon-Checkbox-active"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the
-                <a href="" class="privacy-policy">Privacy Policy</a>
-              </label>
-            </div>
-            <button class="Send-button" type="submit">Send</button>
           </div>
+          <div class="cont-checkbox">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+            />
+            <label class="label-modal checkbox" for="user-privacy">
+              <span class="checkbox-box">
+                <svg class="icon-check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-Checkbox-active"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="privacy-policy">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="Send-button" type="submit">Send</button>
         </form>
       </div>
     </div>
