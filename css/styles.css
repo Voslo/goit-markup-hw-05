@@ -589,29 +589,37 @@ img{
 .icon-footer{
     fill: var(--cloud);
 }
+.subscribe-form{
+    display: flex;
+    gap: 24px;
+}
 .email-footer{
+    width: 264px;
+    height: 40px;
     border-radius: 4px;
     border: 1px solid var(--white);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background-color: var(--navyblue);
-    width: 264px;
-    height: 40px;
-    margin-right: 24px;
-    padding: 8px 0 8px 16px;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    color: var(--white);
 }
 .email-footer::placeholder{
     color: var(--white);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
 }
 .subscribe-button{
-    display: inline-flex;
-    padding: 8px 24px;  
+    min-width: 165px;
+    height: 40px;
+    display: flex;
     justify-content: center;    
-    align-items: center;    
-    gap: 16px;   
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);    
     border-radius: 4px;
     background: var(--iris);
     border: none;
@@ -620,6 +628,9 @@ img{
 .subscribe-button:hover,
 .subscribe-button:focus{
     background-color: var(--ocean);
+}
+.icon-tg{
+    margin-left: 16px;
 }
 /* Modal window */
 .is-hidden{
@@ -649,6 +660,7 @@ img{
     border-radius: 4px;
     background-color: var(--diary);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    padding: 72px 24px 24px 24px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -682,33 +694,10 @@ img{
 .order-form{
     display: flex;
     flex-direction: column;
-    margin: 0 24px 24px;
 }
-.Send-button{
-    display: inline-flex;
-    padding: 16px 32px;
-    border-radius: 4px;
-    background: var(--iris);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    justify-content: center;
-    margin-top: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 169px;
-    color: var(--white);
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.Send-button:hover,
-.Send-button:focus{
-    background-color: var(--ocean);
-}
+
 .modal-text{
     text-align: center;
-    margin-top: 72px;
     margin-bottom: 16px;
     color: var(--navyblue);
     font-size: 16px;
@@ -716,13 +705,27 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.modal-item {
+    margin-bottom: 8px;
+}
+
+.label-modal {
+    margin-bottom: 4px;
+    display: block;
+    color: var(--lightslate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
 .input{
-    width: 360px;
+    width: 100%;
     height: 40px;
     border-radius: 4px;
-    border: 1px solid var(--navyblue-modal);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     padding-left: 38px;
-    outline: none;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus{
@@ -734,20 +737,17 @@ img{
 .input:focus+svg{
     fill: var(--iris);
 }
-.label{
-    margin-top: 8px;
-    margin-bottom: 4px;
-}
-.label:first-child{
-    margin-top: 0px;
-}
 .custom-input{
     position: relative;
 }
-.icon-name{
+.icon-modal{
     position: absolute;
-    top: 11px;
+    top: 50%;
     left: 16px;
+    transform: translateY(-50%);
+}
+.icon-modal:focus{
+    fill: var(--iris);
 }
 .icon-phone{
     position: absolute;
@@ -759,26 +759,23 @@ img{
     top: 8px;
     left: 16px;
 }
-.label-modal{
-    color: var(--lightslate);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
+.modal-textarea{
+    margin-bottom: 16px;
 }
 .checkbox{
-    gap: 8px;
-    display: flex;
-    align-items: center;
+    display: block;
+    color: var(--lightslate);
 }
 .comment{
-    margin-bottom: 16px;
+    width: 100%;
+    height: 120px;
+    color:rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    border: 1px solid var(--navyblue-modal);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    padding: 8px 16px;
     resize: none;
-    padding-left: 16px;
-    padding-top: 8px;
-    outline: none;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comment::placeholder{
@@ -795,17 +792,22 @@ img{
 .comment:focus::placeholder{
     color: var(--iris);
 }
+.cont-checkbox{
+    margin-bottom: 24px;
+}
 .checkbox-box{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
     position: relative;
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-    border-radius: 0.05em;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    box-shadow: 0 0 0 0.1em var(--navyblue-modal);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-check{
     position: absolute;
@@ -815,8 +817,32 @@ img{
 }
 .checkbox-input:checked + .checkbox-box {
     background-color: var(--ocean);
-    background-image: url("./images/icons.svg#icon-Checkbox-active");
+    border: none;
+    fill: var(--cloud);
 }
-.icon-checkbox{
-    fill: var(--white);
+.privacy-policy{
+    color: var(--iris);
+}
+.Send-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    background: var(--iris);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Send-button:hover,
+.Send-button:focus {
+    background-color: var(--ocean);
 }
