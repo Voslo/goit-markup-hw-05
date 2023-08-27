@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link
       rel="stylesheet"
@@ -40,7 +41,7 @@
 
         <address class="link-address">
           <ul class="list-nav-address">
-            <li>
+            <li class="email-link">
               <a href="mailto:info@devstudio.com" class="link link-contacts"
                 >info@devstudio.com</a
               >
@@ -52,22 +53,28 @@
             </li>
           </ul>
         </address>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-menu-icon" width="28" height="28">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
+        </div>
       </div>
     </header>
     <main>
-      <section class="section hero">
+       <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button-order" data-modal-open>
             Order Service
           </button>
         </div>
-      </section>
+      </section> 
 
-      <section class="section-advantages">
+       <section class="section-advantages">
         <div class="container">
           <h2 hidden class="visually-hidden">Advantages of WebStudio</h2>
-          <ul class="list">
+          <ul class="advantages-list">
             <li class="advantages-item">
               <div class="image-advantage">
                 <svg class="icon-antenna" width="64" height="64">
@@ -121,14 +128,15 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
 
-      <section class="section-work">
+       <section class="section-work">
         <div class="container">
           <h2 class="work">What are we doing</h2>
           <ul class="list">
             <li class="work-item">
               <img
+                srcset="./images/laptop.jpg 1x, ./images/laptop@2x.jpg 2x"
                 src="./images/laptop.jpg"
                 alt="Statystics"
                 width="360"
@@ -137,6 +145,7 @@
             </li>
             <li class="work-item">
               <img
+              srcset="./images/message.jpg 1x, ./images/message@2x.jpg 2x"
                 src="./images/message.jpg"
                 alt="Messages"
                 width="360"
@@ -145,6 +154,7 @@
             </li>
             <li class="work-item">
               <img
+                srcset="./images/lap&phone.jpg 1x, ./images/lap&phone@2x.jpg 2x"
                 src="./images/lap&phone.jpg"
                 alt="Artworks"
                 width="360"
@@ -153,14 +163,15 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
 
       <section class="section-team">
         <div class="container">
           <h2 class="team">Our Team</h2>
-          <ul class="list">
+          <ul class="team-list">
             <li class="team-item">
               <img
+                srcset="./images/mark.jpg 1x, ./images/mark@2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -207,6 +218,7 @@
 
             <li class="team-item">
               <img
+               srcset="./images/Tom.jpg 1x, ./images/Tom@2x.jpg 2x"
                 src="./images/Tom.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -252,6 +264,7 @@
 
             <li class="team-item">
               <img
+               srcset="./images/Camila.jpg 1x, ./images/Camila@2x.jpg 2x"
                 src="./images/Camila.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -298,6 +311,7 @@
 
             <li class="team-item">
               <img
+              srcset="./images/Daniel.jpg 1x, ./images/Daniel@2x.jpg 2x"
                 src="./images/Daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -343,8 +357,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section-customers">
+      </section> 
+
+       <section class="section-customers">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
           <ul class="list customers">
@@ -392,7 +407,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
     </main>
 
     <footer class="foot">
@@ -460,7 +475,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> 
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -549,6 +564,76 @@
         </form>
       </div>
     </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-close-icon icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link current" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Contacts</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-contacts">
+        <li>
+          <a href="tel:+110001111111" class="link mobile-contacts-phone"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="link mobile-contacts-email"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+          <ul class="list mobile-media">
+            <li class="media-item">
+              <a href="" class="footer-media-ref">
+                <svg class="icon-footer" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="media-item">
+              <a href="" class="footer-media-ref">
+                <svg class="icon-footer" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="media-item">
+              <a href="" class="footer-media-ref">
+                <svg class="icon-footer" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="media-item">
+              <a href="" class="footer-media-ref">
+                <svg class="icon-footer" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin-footer"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
