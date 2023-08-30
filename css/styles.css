@@ -213,9 +213,12 @@ img{
     }
     .link-address {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;      
+        justify-content: center;
+    }
+    .list-nav-address{
+        display: flex;
+        flex-direction: column;
         gap: 12px;
     }
     .list-nav {
@@ -225,9 +228,6 @@ img{
         font-size: 12px;
         line-height: 1.16;
         letter-spacing: 0.04em;
-    }
-    .email-link{
-        /* margin-bottom: 12px; */
     }
 }
 @media only screen and (min-width: 1157.98px) {
@@ -446,7 +446,8 @@ img{
     .advantages-list{
         display:flex;
         flex-wrap:wrap;
-        gap:24px;
+        row-gap: 72px;
+        column-gap: 24px;
     }
     .advantages-item{
         width: calc((100% - 24px) /2);
@@ -704,10 +705,14 @@ img{
     gap: 16px;
 }
 @media only screen and (max-width: 767.98px) {
+    .footer-text{
+        text-align: start;
+    }
     .subscribe-form{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 16px;
     }
     .footer-logo {
         text-align: center;
@@ -716,7 +721,7 @@ img{
   .footer-media-text{
         text-align: center;
   }
-  .footer-media{
+  .footer-media-cont{
     margin-bottom: 72px;
   }
 }
@@ -725,7 +730,6 @@ img{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     align-items: baseline;
     column-gap: 24px;   
   }
@@ -733,9 +737,12 @@ img{
     display: flex;
     gap: 24px;
   }
-  .footer-logo{
-    margin-bottom: 72px;
-  }
+
+}
+@media only screen and (max-width: 1157.98px) {
+    .footer-logo {
+        margin-bottom: 72px;
+    }
 }
 @media only screen and (min-width: 1157.98px) {
     .footer-container{
@@ -806,7 +813,6 @@ img{
     letter-spacing: 0.04em;
     padding-left: 16px;
     color: var(--white);
-    margin-bottom: 16px;
 }
 .email-footer::placeholder{
     color: var(--white);
@@ -858,7 +864,7 @@ img{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 408px;
+    max-width: 408px;
     min-height: 584px;
     border-radius: 4px;
     background-color: var(--diary);
@@ -1005,6 +1011,7 @@ img{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     fill: transparent;
     position: relative;
     width: 16px;
@@ -1029,6 +1036,11 @@ img{
 }
 .privacy-policy{
     color: var(--iris);
+}
+@media only screen and (max-width: 767.98px) {
+   .checkbox{
+    display: block;
+  }
 }
 .send-btn {
     display: block;
@@ -1117,6 +1129,7 @@ img{
     flex-direction: column;
     gap: 40px;
     margin-bottom: auto;
+    margin-top: 80px;
 }
 
 .mobile-menu .link {
