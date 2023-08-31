@@ -250,6 +250,7 @@ img{
 }
 /* Hero section */
 .hero {
+    max-width: 1440px;
     background-color:var(--navyblue);
     padding-top: 112px;
     padding-bottom: 112px;
@@ -737,7 +738,11 @@ img{
     display: flex;
     gap: 24px;
   }
-
+}
+@media only screen and (min-width: 767.98px) and (max-width: 1157.98px) {
+   .footer-container{
+    margin-left: 92px;
+  }
 }
 @media only screen and (max-width: 1157.98px) {
     .footer-logo {
@@ -752,7 +757,7 @@ img{
    .footer-logo{
     margin-right: 120px;
   }
-  .footer-media{
+  .footer-media-cont{
     margin-right: 80px;
   }
 }
@@ -1170,5 +1175,5 @@ img{
 }
 .mobile-media{
     margin-top: 48px;
-    gap: 30px;
+    gap: 26px;
 }
